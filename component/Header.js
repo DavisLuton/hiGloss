@@ -1,5 +1,5 @@
 
-import Link from "next/link";
+import NextLink from "next/link";
 import React from "react";
 import { 
     Flex, 
@@ -10,7 +10,11 @@ import {
     Box, 
     useDisclosure,
     VStack,
-    Container} 
+    Container,
+    SimpleGrid,
+    GridItem,
+    Link,
+    Divider} 
     from "@chakra-ui/react";
 import {HamburgerIcon} from "@chakra-ui/icons";
 
@@ -22,52 +26,74 @@ const Header = () => {
     <Container position='absolute'  padding={0} >
     
         {/* navbar header */}
-       <Flex  justify='space-between' bg='gray.50' w='100vw'>
-            <h1>Logo</h1>
-            {/* desktop nav: */}
-            <HStack display={{ base: 'none', md: 'inline-flex' }}>
-                <Link href='/'>Home</Link>
-                <Link href='/services'>Services</Link>
-                <Link href='/about'>About</Link>
-                <Link href='/contact'>Contact</Link>
-            </HStack>
-        
+      
+        <SimpleGrid w='100vw' minHeight='2em' columns={12} >
+                <GridItem colStart={2} colEnd={12}>
+                    <Flex justify='space-between' align='center'>
+                        <h1>Logo</h1>
+                        {/* desktop nav: */}
+                        <HStack display={{ base: 'none', md: 'inline-flex' }}>
+                            <NextLink href='/' passHref>
+                                <Link>Home</Link> 
+                            </NextLink>
 
-           {/* mobile nav: */}
-            <Box display={{base: 'flex', md: 'none '}}
-                alignItems='flex-end'
-                flexDirection='column'>
-                <IconButton
-                    display={{ base: "flex", md: "none" }}
-                    aria-label="Open menu"
-                    fontSize="20px"
-                    icon={<HamburgerIcon/>}
-                    variant="ghost"
-                    onClick={mobileNav.onToggle}
-                />
-               <VStack 
+                            <NextLink href='/services' passHref>
+                                <Link>Services</Link> 
+                            </NextLink>
 
-                display={mobileNav.isOpen ? 'flex' : 'none'}
-                flexDirection='column'
-                spacing={3}>
-                    <Button w='full' variant='ghost'>
-                        <Link href='/'>Home</Link>
-                    </Button>
-                    <Button w='full' variant='ghost'>
-                        <Link href='/services'>Services</Link>
-                    </Button>
-                    <Button w='full' variant='ghost'>
-                        <Link href='/about'>About</Link>
-                    </Button>
-                    <Button w='full' variant='ghost'>
-                        <Link href='/contact'>Contact</Link>
-                    </Button>
+                            <NextLink href='/about' passHref>
+                                <Link>About</Link> 
+                            </NextLink>
+                            
+                            <NextLink href='/contact' passHref>
+                                <Link>Contact</Link> 
+                            </NextLink>
+                        </HStack>
+                    
+
+                    {/* mobile nav: */}
+                        <Box display={{base: 'flex', md: 'none '}}
+                            alignItems='flex-end'
+                            flexDirection='column'>
+                            <IconButton
+                                display={{ base: "flex", md: "none" }}
+                                aria-label="Open menu"
+                                fontSize="20px"
+                                icon={<HamburgerIcon/>}
+                                variant="ghost"
+                                onClick={mobileNav.onToggle}/> 
+                            </Box>
+                        </Flex>
+                    </GridItem>
                    
-               </VStack> 
-            </Box>
-       
-        </Flex>
-     </Container>
+                </SimpleGrid>
+                
+                <VStack 
+
+                    display={mobileNav.isOpen ? 'flex' : 'none'}
+                    flexDirection='column'
+                    spacing={3}>
+                        <Button w='full' variant='ghost'>
+                            <NextLink href='/'>Home</NextLink>
+                        </Button>
+                        <Button w='full' variant='ghost'>
+                            <NextLink href='/services'>Services</NextLink>
+                        </Button>
+                        <Button w='full' variant='ghost'>
+                            <NextLink href='/about'>About</NextLink>
+                        </Button>
+                        <Button w='full' variant='ghost'>
+                            <NextLink href='/contact'>Contact</NextLink>
+                        </Button>
+                    
+                </VStack> 
+              
+        
+                <Divider w='100vw'/>        
+     </Container> 
+
+     
+     
      );
 }
  

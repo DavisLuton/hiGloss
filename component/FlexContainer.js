@@ -1,15 +1,17 @@
-import {Flex,} from "@chakra-ui/react";
+import {Flex, Grid,} from "@chakra-ui/react";
 
 const FlexContainer = (props) => {
     return ( 
-        <Flex
+        <Grid
           w='full' 
           h='100vh'
-          justify='center'
-          align='center'
+          templateColumns='repeat(12, 1fr)'
+          templateRows='repeat(12, 1fr)'
+
+          
           >
           {props.children}      
-        </Flex>
+        </Grid>
      );
 }
  

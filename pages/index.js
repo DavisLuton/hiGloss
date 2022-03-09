@@ -14,7 +14,8 @@ export default function Home() {
  
     
     <FlexContainer>
-      <Container>
+      <GridItem colStart={4} colEnd={9}
+                rowStart={4} rowEnd={9} >
           <Heading>
             Big Letters 
           </Heading>
@@ -26,7 +27,7 @@ export default function Home() {
               Get in Touch
             </Button>
           </Link>
-        </Container>    
+        </GridItem>    
       </FlexContainer>
   )
 }
