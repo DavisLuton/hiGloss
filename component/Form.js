@@ -1,6 +1,6 @@
 import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
-import { Box, Button, FormControl, FormLabel, Input, Textarea, VStack} from '@chakra-ui/react';
+import { Box, Button, Flex, FormControl, FormLabel, Input, Textarea, VStack} from '@chakra-ui/react';
 
 const Form=()=> {
   const [state, handleSubmit] = useForm("contact");
@@ -9,13 +9,25 @@ const Form=()=> {
   }
   return (
 
-      <Box p='5' borderWidth='1px' borderColor='gray.200'w='full'>
+      <VStack 
+        direction='column'
+        alignItems='start'
+        spacing='2em'
+        p='5' 
+        borderWidth='1px' 
+        borderColor='gray.200' 
+        borderRadius='lg'  
+        w='full' 
+        h='full'>
         {/* <form onSubmit={handleSubmit} method="POST"> */}
     
 
         <FormControl>
           <FormLabel htmlFor='email'>Email Address:</FormLabel>
-          <Input id='email' type='email' placeholder='Your email'/>      
+          <Input 
+            id='email' 
+            type='email' 
+            placeholder='Your email'/>      
         </FormControl>
         
         <ValidationError 
@@ -26,7 +38,10 @@ const Form=()=> {
       
       <FormControl>
           <FormLabel htmlFor='email'>Message:</FormLabel>
-          <Textarea id='message'  placeholder='Tell us things.'/>      
+          <Textarea 
+            
+            id='message'  
+            placeholder='Tell us things.'/>      
         </FormControl>
         
 
@@ -39,7 +54,7 @@ const Form=()=> {
           Submit
         </Button>
       {/* </form> */}
-    </Box>
+    </VStack>
   );
 }
 export default Form;

@@ -1,33 +1,46 @@
-import Head from 'next/head'
-import Header from '../component/Header'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import heroImg from '/assets/heroPlaceholder.jpg'
-import Link from 'next/link'
 import { Box, Button, Container, Flex, GridItem, Heading, VStack } from '@chakra-ui/react'
-import FlexContainer from '../component/FlexContainer'
-
-
+import GridContainer from '../component/GridContainer'
+import Image from 'next/image'
+import lowPoly from '/assets/lowpoly.png'
+import NextLink from "next/link"
 export default function Home() {
   return (
     
- 
     
-    <FlexContainer>
-      <GridItem colStart={4} colEnd={9}
-                rowStart={4} rowEnd={9} >
-          <Heading>
-            Big Letters 
-          </Heading>
-          <Heading>
-            Smaller Letters
-          </Heading>
-          <Link href='/contact'>
-            <Button >
-              Get in Touch
-            </Button>
-          </Link>
-        </GridItem>    
-      </FlexContainer>
+    
+    <GridContainer>
+
+    
+        <Container zIndex={-1}>
+        <Image src={lowPoly} 
+               alt="img"
+               layout='fill'
+               objectFit='cover'
+        >
+              
+        </Image> 
+        </Container>
+      
+      <GridItem 
+                colStart={{base: 2, md:4}} colEnd={{base:12, md: 9}}
+                rowStart={4} rowEnd={9} 
+                >
+          <VStack>
+            <Box textAlign='center' color='white' fontweight='semibold'fontSize= {{base:'6xl', lg: '8xl'}} >
+              Big Letters 
+            </Box>
+            <Heading color='white'>
+              Smaller Letters
+            </Heading>
+            
+              <Button >
+              <NextLink href='/contact' passHref>
+                 Get in Touch!
+              </NextLink>
+              </Button>
+          </VStack>
+        </GridItem>
+            
+      </GridContainer>
   )
 }

@@ -27,7 +27,7 @@ const Header = () => {
     
         {/* navbar header */}
       
-        <SimpleGrid w='100vw' minHeight='2em' columns={12} >
+        <SimpleGrid w='100vw' minHeight='3em' columns={12} >
                 <GridItem colStart={2} colEnd={12}>
                     <Flex justify='space-between' align='center'>
                         <h1>Logo</h1>

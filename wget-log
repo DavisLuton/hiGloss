@@ -1,0 +1,18 @@
+Will not apply HSTS. The HSTS database must be a regular and non-world-writable file.
+ERROR: could not open HSTS store at '/home/davis/.wget-hsts'. HSTS will be disabled.
+--2022-03-24 15:51:07--  https://mail.google.com/mail/u/0/?ui=2
+Resolving mail.google.com (mail.google.com)... 142.250.217.69, 2607:f8b0:400a:80b::2005
+Connecting to mail.google.com (mail.google.com)|142.250.217.69|:443... connected.
+HTTP request sent, awaiting response... 302 Moved Temporarily
+Location: https://accounts.google.com/ServiceLogin?service=mail&passive=1209600&osid=1&continue=https://mail.google.com/mail/u/0/?ui%3D2&followup=https://mail.google.com/mail/u/0/?ui%3D2&emr=1 [following]
+--2022-03-24 15:51:08--  https://accounts.google.com/ServiceLogin?service=mail&passive=1209600&osid=1&continue=https://mail.google.com/mail/u/0/?ui%3D2&followup=https://mail.google.com/mail/u/0/?ui%3D2&emr=1
+Resolving accounts.google.com (accounts.google.com)... 142.250.217.77, 2607:f8b0:400a:80a::200d
+Connecting to accounts.google.com (accounts.google.com)|142.250.217.77|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘index.html?ui=2’
+
+index.html?ui=2                      [<=>                                                       ]       0  --.-KB/s               index.html?ui=2                      [ <=>                                                      ]  95.67K  --.-KB/s    in 0.05s   
+
+2022-03-24 15:51:08 (1.93 MB/s) - ‘index.html?ui=2’ saved [97964]
+

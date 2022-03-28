@@ -2,7 +2,10 @@ import { Box, Container , Heading, Img, Text} from '@chakra-ui/react';
 import Image from 'next/image'
 const Card = ({imagesrc, title, text}) => {
     return ( 
-        <Box p={6}
+        <Box 
+             m={3}
+             p={6}
+
              borderWidth='1px'
              borderRadius='lg'  
              boxShadow='base' 
