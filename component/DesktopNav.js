@@ -8,7 +8,7 @@ import {
 
 const DesktopNav = () => {
     return ( 
-        <HStack 
+        <HStack pt={1.5}
             
             spacing='1.5em'
         >

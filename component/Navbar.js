@@ -6,10 +6,13 @@ import { Container,
         GridItem, 
         Flex,
         Box,
+        HStack,
         Divider, 
         } from "@chakra-ui/react";
+import logo from '/assets/logo.svg'
 import MobileNav from "./MobileNav";
 import DesktopNav from "./DesktopNav";
+import Image from "next/image";
 
 const Navbar = () => {
     return ( 
@@ -32,8 +35,26 @@ const Navbar = () => {
                         align='flex-end'
                         
                         >
-
-                        <Heading as='h1' size='md'>Logo</Heading>
+                        <HStack
+                            m={0}
+                            p={0}
+                        >
+                        <Box maxH={8} maxW={8}>
+                        <Image 
+                                src={logo} 
+                                alt='logo'
+                               
+                                  
+                                />
+                        </Box>
+                            
+                            <Heading 
+                                pl={5}
+                                as='h1' 
+                                size='md'>
+                            High Gloss</Heading>
+                        </HStack>
+                        
 
                         <Box 
                             

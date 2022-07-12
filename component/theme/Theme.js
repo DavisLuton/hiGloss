@@ -9,7 +9,7 @@ const Theme = extendTheme({
             },
         },
         fonts:{
-            heading: "Raleway, sans-serif",
+            heading: "Open Sans, sans-serif",
             body: "Raleway, sans-serif",
         },
 
@@ -27,10 +27,14 @@ const Theme = extendTheme({
                 },
             },
 
+            Navbar:{
+                
+            },
+
             Heading:{
                 baseStyle: {
                     lineHeight: 'taller',
-                    fontWeight:'bold'   
+                       
                 },
             },
 
@@ -54,18 +58,18 @@ const Theme = extendTheme({
                 }
             },
 
+          
+
             
         },
 
-        textStyles:{
-            hero:{
-                fontWeight: 'bold', 
-                fontSize: '8rem'
-            }
-        },
+      
 
         colors: {
-            brand: '#58c1e6'
+            brand: '#2a2576',
+            contrast: '#d76e90',
+           
+            
         }
 
     
