@@ -38,7 +38,7 @@ export default function Home() {
               
             
               <Text fontSize={{base:'md', lg: '2xl'}} color='contrast' fontweight='600'>
-                With clean windows, sunny day shines a little brighter
+                With clean windows, every day shines a little brighter
               </Text>
             </Box>
 
